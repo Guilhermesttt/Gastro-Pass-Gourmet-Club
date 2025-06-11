@@ -31,7 +31,7 @@ Gastro Pass tem como missão conectar amantes da boa comida com estabelecimentos
 
 Você pode acessar o **Gastro Pass** online clicando no link abaixo:
 
-🌐 [https://gastro-pass.vercel.app](https://gastro-pass.vercel.ap)
+🌐 [[https://gastro-pass.vercel.app](https://gastropass-gourmetclub.netlify.app/)
 
 ---
 
