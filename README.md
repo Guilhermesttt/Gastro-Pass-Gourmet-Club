@@ -79,7 +79,7 @@ Para configurar e rodar o projeto localmente, siga os passos abaixo:
 
 ## 👨‍💻 Desenvolvedor
 
-**Guilherme [Seu Sobrenome]**  
+**Guilherme Sant'Ana**  
 📧 [guilherme@email.com](mailto:dev.guilhermesantana@gmail.com)  
 🔗 [LinkedIn](https://www.linkedin.com/in/guilherme-lima-de-sant-ana-b243aa359/)  
 📂 [Portfólio](https://guilhermesttt.github.io/Portfolio/#?fbclid=PAZXh0bgNhZW0CMTEAAaffczXmDkhk0GbQ_Og2pSfihIpwW4DT-Z9sksgOcUkNC7mx5DvU3ZS0brQ_aem_I5YrWcmsZbZ3ucWikaX-vg)
