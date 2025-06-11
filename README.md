@@ -46,9 +46,40 @@ Você pode acessar o **Gastro Pass** online clicando no link abaixo:
 
 ---
 
+## ⚙️ Instalação e Execução
+
+Para configurar e rodar o projeto localmente, siga os passos abaixo:
+
+1.  **Clone o repositório:**
+
+    ```bash
+    git clone https://github.com/Guilhermesttt/Gastro-Pass-Gourmet-Club.git
+    cd Gastro-Pass-Gourmet-Club
+    ```
+
+2.  **Instale as dependências:**
+
+    ```bash
+    npm install
+    # ou, se você usa Yarn:
+    # yarn install
+    ```
+
+3.  **Execute o projeto:**
+
+    ```bash
+    npm run dev
+    # ou, se você usa Yarn:
+    # yarn dev
+    ```
+
+    O projeto estará disponível em `http://localhost:5173` (ou outra porta indicada pelo Vite).
+
+---
+
 ## 👨‍💻 Desenvolvedor
 
 **Guilherme [Seu Sobrenome]**  
 📧 [guilherme@email.com](mailto:dev.guilhermesantana@gmail.com)  
 🔗 [LinkedIn](https://www.linkedin.com/in/guilherme-lima-de-sant-ana-b243aa359/)  
-📂 [Portfólio](https://guilhermesttt.github.io/Portfolio/#?fbclid=PAZXh0bgNhZW0CMTEAAaffczXmDkhk0GbXcqQ_Og2pSfihIpwW4DT-Z9sksgOcUkNC7mx5DvU3ZS0brQ_aem_I5YrWcmsZbZ3ucWikaX-vg)
+📂 [Portfólio](https://guilhermesttt.github.io/Portfolio/#?fbclid=PAZXh0bgNhZW0CMTEAAaffczXmDkhk0GbQ_Og2pSfihIpwW4DT-Z9sksgOcUkNC7mx5DvU3ZS0brQ_aem_I5YrWcmsZbZ3ucWikaX-vg)
