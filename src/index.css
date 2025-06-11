@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  :root {
+    --primary: 157, 99, 20;         /* Seu #9D6314 */
+    --primary-dark: 168, 107, 27;    /* Seu #A86B1B */
+    --primary-foreground: 255, 255, 255; /* Branco para texto sobre o primário */
+
+    --background: 228, 222, 215;     /* Seu #E4DED7 */
+    --foreground: 30, 30, 30;       /* Preto/Cinza Escuro para texto principal */
+
+    --secondary: 168, 107, 27;      /* Seu #A86B1B como secundário */
+    --secondary-foreground: 255, 255, 255; /* Branco para texto sobre o secundário */
+
+    --footer: 168, 107, 27; /* Usando seu marrom médio, por exemplo */
+    --muted: 119, 119, 119;         /* Seu #777777 */
+    --border: 168, 107, 27;        /* Marrom médio para bordas mais visíveis */
+
+    --card: 245, 242, 238;           /* Tom mais claro que o background */
+    --card-foreground: 30, 30, 30;   /* Texto escuro em cards */
+
+    --popover: 245, 242, 238;        /* Mesmo tom que card para consistência */
+    --popover-foreground: 30, 30, 30;
+
+    --muted-foreground: 119, 119, 119; /* Seu #777777 */
+
+    --accent: 157, 99, 20;          /* Usar primary como accent */
+    --accent-foreground: 255, 255, 255; /* Branco sobre accent */
+
+    --destructive: 225, 29, 72;       /* Vermelho padrão */
+    --destructive-foreground: 255, 255, 255;
+
+    --input: 245, 242, 238;          /* Mesmo tom que card para consistência */
+    --ring: 157, 99, 20;            /* Seu #9D6314 para foco */
+
+    --radius: 0.5rem; /* Mantido */
+
+    --sidebar-background: 220, 210, 200; /* Um tom ligeiramente mais escuro que o background principal */
+    --sidebar-foreground: 30, 30, 30;
+    --sidebar-primary: 157, 99, 20;
+    --sidebar-primary-foreground: 255, 255, 255;
+    --sidebar-accent: 168, 107, 27;
+    --sidebar-accent-foreground: 255, 255, 255;
+    --sidebar-border: 168, 107, 27; /* Marrom médio para bordas mais visíveis */
+    --sidebar-ring: 157, 99, 20;
+  }
+
+  .dark {
+    --background: 30, 30, 30;
+    --foreground: 255, 255, 255;
+
+    --card: 40, 40, 40;
+    --card-foreground: 255, 255, 255;
+
+    --popover: 40, 40, 40;
+    --popover-foreground: 255, 255, 255;
+
+    --primary: 157, 99, 20;
+    --primary-foreground: 255, 255, 255;
+
+    --secondary: 228, 222, 215;
+    --secondary-foreground: 30, 30, 30;
+
+    --muted: 60, 60, 60;
+    --muted-foreground: 180, 180, 180;
+
+    --accent: 60, 60, 60;
+    --accent-foreground: 255, 255, 255;
+
+    --destructive: 230, 60, 60;
+    --destructive-foreground: 255, 255, 255;
+
+    --border: 80, 80, 80;
+    --input: 80, 80, 80;
+    --ring: 179, 114, 30;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold text-foreground mb-4;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-foreground-light leading-relaxed mb-4;
+  }
+
+  /* Estilização base para inputs, selects e textareas */
+  input,
+  select,
+  textarea {
+    @apply border-border bg-card shadow-sm px-3 py-2 rounded-custom focus:border-primary focus:ring-1 focus:ring-primary/50;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .card {
+    @apply bg-card text-foreground rounded-custom p-6 shadow-custom border border-border transition-all duration-300 ease-in-out;
+  }
+  .card:hover {
+    @apply transform -translate-y-1 shadow-custom-lg;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-custom font-medium transition-all duration-300 ease-in-out shadow-custom;
+  }
+  .btn:hover {
+    @apply transform -translate-y-0.5 shadow-custom-lg;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  .btn-primary:hover {
+    @apply bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-dark text-white hover:bg-primary;
+  }
+  .btn-secondary:hover {
+    @apply bg-primary;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  .btn-outline:hover {
+    @apply bg-primary text-white;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-custom border-2 border-border bg-card text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 ease-in-out;
+  }
+  .input:focus {
+    @apply border-primary ring-2 ring-primary/30;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-foreground mb-2;
+  }
+
+  .component-highlight {
+    @apply border-2 border-primary/70 shadow-custom;
+  }
+  
+  /* Novos estilos para links e botões */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  
+  .link-underline:after {
+    @apply content-[''] absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-primary origin-bottom-right transition-transform duration-300;
+  }
+  
+  .link-underline:hover:after {
+    @apply scale-x-100 origin-bottom-left;
+  }
+  
+  .pulse {
+    @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite];
+  }
+}
+
+/* Classes adicionais para melhorar a visibilidade de elementos */
+input, select, textarea {
+  @apply border-2 border-border shadow-sm;
+}
+
+/* Efeito de brilho para botões */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect .shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  pointer-events: none;
+  transition: none;
+  z-index: 1;
+}
+
+.shine-effect:hover .shine {
+  animation: shine 1s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Adicionar classe para destacar componentes */
+.component-highlight {
+  @apply border-2 border-primary/70 shadow-md;
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+  }
+
+  .fade-in-up {
+    transform: translateY(30px);
+  }
+  .fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in-left {
+    transform: translateX(-30px);
+  }
+  .fade-in-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-in-right {
+    transform: translateX(30px);
+  }
+  .fade-in-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-in {
+    /* Apenas fade, sem slide */
+  }
+  .fade-in.is-visible {
+    opacity: 1;
+  }
+
+  /* Adicionar delay para elementos em sequência */
+  .delay-100.is-visible { transition-delay: 0.1s; }
+  .delay-200.is-visible { transition-delay: 0.2s; }
+  .delay-300.is-visible { transition-delay: 0.3s; }
+  .delay-400.is-visible { transition-delay: 0.4s; }
+  .delay-500.is-visible { transition-delay: 0.5s; }
+  
+  /* Novas animações */
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+  
+  .hover-rotate {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-rotate:hover {
+    @apply rotate-3;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+}
